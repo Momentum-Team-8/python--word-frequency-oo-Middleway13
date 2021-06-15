@@ -7,14 +7,18 @@ STOP_WORDS = [
 
 class FileReader:
     def __init__(self, filename):
-        pass
+        self.filename = filename
 
     def read_contents(self):
         """
         This should read all the contents of the file
         and return them as one string.
         """
-        raise NotImplementedError("FileReader.read_contents")
+        with open("one-today.txt") as filename:
+            filename = filename.read()
+            print(filename)
+
+        # raise NotImplementedError("FileReader.read_contents")
 
 
 class WordList:
